@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+     <title>Music Session</title>
+    <link rel="stylesheet" type="text/css" href="film.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/b9812d3c43.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+      <nav>
+           
+        <div class="nav-links">
+        <ul>
+      <li><a href="video.html"><h5>Etherealms</h5></a></li>
+             <li><a href="film.html"><h5>Movies</h5></a></li>
+             <li><a href="songs.html"><h5>Music Session</h5></a></li>
+             <li><a href="quotes.html"><h5>Cœur</h5></a></li>
+             <li><a href="rateteacher.html"><h5>Evalu8</h5></a></li>
+             
+    
+    </ul>
+      </div>
+      </nav>
+
+    <header>
+       
+     
+     
+    </header>
+    <div style="
+    font-size: 15px;
+    font-family: 'Courier', monospace;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 10px;">
+      ● definition: <br>
+      music is often considered a manifestation of the soul, a way of expressing emotions, thoughts, and experiences that are difficult to put into words,
+       and it is seen as a powerful means of accessing and connecting with the soul. In this sense, music can be seen as a bridge between the outer world of sounds
+        and the inner world of feelings and experiences.
+     </div>
+    
+      <section id="songs">
+        <div class="card">
+          <img src="frank_ocean.png" alt="Song Title 1">
+          <h2 class="song-title">Nights</h2>
+          <p class="song-artist">by Frank Ocean</p>
+          <i class="fa-brands fa-spotify"></i>Spotify
+          <audio src="Frank Ocean - Nights.mp3"></audio>
+        </div>
+          <div class="card">
+          <img src="harry.png" alt="Song Title 2">
+          <h2 class="song-title">Boyfriends</h2>
+          <p class="song-artist">by Harry Styles</p>
+          <i class="fa-brands fa-spotify"></i>Spotify
+          <audio src="Harry Styles - Boyfriends (Audio).mp3"></audio>
+        </div>
+        <div class="card">
+          <img src="hey_ya.jpg" alt="Song Title 3">
+          <h2 class="song-title">Hey Ya!</h2>
+          <p class="song-artist">by Outkast</p>
+          <i class="fa-brands fa-spotify"></i>Spotify
+          <audio src="OUTKAST   Hey Ya! Lyrics.mp3"></audio>
+        </div>
+        <div class="card">
+            <img src="sza.jpg" alt="Song Title 3">
+            <h2 class="song-title">Kill Bill</h2>
+            <p class="song-artist">by SZA</p>
+            <i class="fa-brands fa-spotify"></i>Spotify
+            <audio src="SZA - Kill Bill (Lyrics).mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="drake.jpg" alt="Song Title 3">
+            <h2 class="song-title">Passionfruit</h2>
+            <p class="song-artist">by Drake</p>
+            <i class="fa-brands fa-spotify"></i>Spotify
+            <audio src="Passionfruit.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="raye.png" alt="Song Title 3">
+            <h2 class="song-title">Escapism</h2>
+            <p class="song-artist">by RAYE</p>
+            <i class="fa-brands fa-spotify"></i>Spotify
+            <audio src="RAYE, 070 Shake - Escapism. (Official Music Video).mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="zero.jpg" alt="Song Title 3">
+            <h2 class="song-title">Less than zero</h2>
+            <p class="song-artist">by The Weeknd</p>
+            <i class="fa-brands fa-spotify"></i>Spotify
+            <audio src="The Weeknd - Less Than Zero (Lyrics).mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="abba.jfif" alt="Song Title 3">
+            <h2 class="song-title">Angeleyes</h2>
+            <p class="song-artist">by ABBA</p>
+            <i class="fa-brands fa-spotify"></i>Spotify
+            <audio src="ABBA - Angeleyes (Lyrics).mp3"></audio>
+          </div>
+      </section> 
+
+      <script>
+        $(document).ready(function() {
+  $(".card").click(function() {
+    var audio = $(this).find("audio")[0];
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+});
+
+      </script>
+   
+      
+  </body>
+</html>

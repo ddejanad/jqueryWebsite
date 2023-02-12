@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+
+body {
+  background-image: url('butterfly2.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll; 
+  background-color: rgba(0, 0, 0, 0.7);
+}
+p{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #f8f5f5;
+  text-shadow: 2px 2px #444343;
+}
+     #rating {
+  text-align: center;
+}
+/* .head{
+  background-color: #aad3db;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+} */
+
+#stars i {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#stars i.selected {
+  color: rgb(32, 159, 218);
+}
+
+#username {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+#submit-rating {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 13px;
+  background-color: rgb(218, 217, 213);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#ratings-list {
+  margin-top: 20px;
+  text-align: left;
+  color: white;
+}
+
+#summary {
+  margin-top: 20px;
+  font-size: 18px;
+}
+/* p{
+  font: bold;
+  font-style: inherit;
+  font-size: 40px;
+  margin-left: 40px;
+} */
+.info-container {
+  width: 20%;
+  margin-left: 80px;
+  margin-right: 20px;
+  padding: 30px;
+  background-color:transparent;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+h5 {
+  color: white;
+}
+h2{
+  color: white;
+}
+h3{
+  color:white;
+}
+h4{
+  color: white;
+}
+
+    </style>
+     <title>Rate your teachers</title>
+     <link rel="stylesheet" type="text/css" href="C:\Users\Dejana\film\film.css">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="path/to/confetti.js"></script>
+     <script src="https://kit.fontawesome.com/b9812d3c43.js" crossorigin="anonymous"></script>
+     <script src="script.js"></script>
+     
+   </head>
+   <body>
+    <nav>
+           
+      <div class="nav-links">
+      <ul>
+    <li><a href="video.html"><h5>Etherealms</h5></a></li>
+           <li><a href="film.html"><h5>Movies</h5></a></li>
+           <li><a href="songs.html"><h5>Music Session</h5></a></li>
+           <li><a href="quotes.html"><h5>Cœur</h5></a></li>
+           <li><a href="rateteacher.html"><h5>Evalu8</h5></a></li>
+           
+  
+  </ul>
+    </div>
+    </nav>
+  </head>
+  <body>
+    <p>Rate your teachers ! </p>
+
+    <div class="info-container">
+    <div id="rating">
+      <audio id="yay-sound" src="Yay_Sound_Effect.mp3"></audio>
+      <audio id="what-sound" src="Uh_What_Do_You_Mean___Boring_Sound_Effect_HD_.mp3"></audio>
+        <h2>Vladimir Atanasovski</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div id="rating">
+      
+        <h2>Valentin Rakovik</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating1">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+    <div class="info-container">
+      <div id="rating">
+        <h2>Danijela Efnuseva</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating2">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+    <div class="info-container">
+      <div id="rating">
+        <h2>Pero Latkoski</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating3">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+    <div class="info-container">
+      <div id="rating">
+        <h2>Borislav Popovski</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating4">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+    <div class="info-container">
+      <div id="rating">
+        <h2>Marija Kalendar</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating5">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+    <div class="info-container">
+      <div id="rating">
+        <h2>Goran Jakimovski</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating6">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+    <div class="info-container">
+      <div id="rating">
+        <h2>Ana Colakoska</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating7">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div id="rating">
+        <h2>Anton Causevski</h2>
+        <h3>Give a rating:</h3>
+        <div id="stars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="submit-rating6">Submit</button>
+        <h3>Ratings:</h3>
+        <ul id="ratings-list">
+          <!-- ratings will be appended here -->
+        </ul>
+        <h4 id="summary"></h4>
+      </div>
+    </div>
+
+      <script>
+       $(document).ready(function() {
+  // Add click event to each star
+  $('.fa-star').on('click', function() {
+    // Remove selected class from all stars
+    $(this).parent().find('.fa-star').removeClass('selected');
+
+    // Get the value of the selected star
+    var value = $(this).attr('data-value');
+
+    // Add selected class to the selected stars
+    for (var i = 1; i <= value; i++) {
+      $(this).parent().find('.fa-star[data-value="' + i + '"]').addClass('selected');
+    }
+  });
+
+  // Add click event to the submit button
+  $('#submit-rating1').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+   
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+   // Add click event to the submit button
+   $('#submit-rating').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+});
+ // Add click event to the submit button
+ $('#submit-rating2').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+   // Add click event to the submit button
+   $('#submit-rating3').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+   // Add click event to the submit button
+   $('#submit-rating4').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+   // Add click event to the submit button
+   $('#submit-rating5').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+ // Add click event to the submit button
+ $('#submit-rating6').on('click', function() {
+    // Get the selected value
+    var value = $(this).parent().find('.fa-star.selected').length;
+
+    // Get the username
+    var username = $(this).parent().find('#username').val();
+
+    // Check if username is not empty
+    if (username === '') {
+      alert('Ako sakate da ste anonimni, pisete bilo sto.');
+      return;
+    }
+
+    // Get the ratings list
+    var ratingsList = $(this).parent().find('#ratings-list');
+
+    // Append the rating to the list
+    ratingsList.append('<li>' + username + ': ' + value + ' stars</li>');
+
+    // Get the summary
+    var summary = $(this).parent().find('#summary');
+
+    // Update the summary
+    summary.text('Average rating: ' + calculateAverage(ratingsList) + ' stars');
+  });
+  
+// Function to calculate the average rating
+function calculateAverage(ratingsList) {
+  // Get all the ratings
+  var ratings = ratingsList.find('li');
+
+  // Calculate the total
+  var total = 0;
+  for (var i = 0; i < ratings.length; i++) {
+    total += parseInt($(ratings[i]).text().split(': ')[1].split(' ')[0]);
+  }
+
+  // Return the average
+  return (total / ratings.length).toFixed(1);
+}
+
+$(document).ready(function() {
+    $("#submit-rating").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 5) {
+        var yaySound = $("#yay-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 1) {
+        var yaySound = $("#what-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating1").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 5) {
+        var yaySound = $("#yay-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating1").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 1) {
+        var yaySound = $("#what-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating2").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 5) {
+        var yaySound = $("#yay-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating2").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 1) {
+        var yaySound = $("#what-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating3").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 5) {
+        var yaySound = $("#yay-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating3").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 1) {
+        var yaySound = $("#what-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating4").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 5) {
+        var yaySound = $("#yay-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating4").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 1) {
+        var yaySound = $("#what-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating5").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 5) {
+        var yaySound = $("#yay-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+  $(document).ready(function() {
+    $("#submit-rating5").click(function() {
+      var selectedValue = 0;
+      $("#stars i").each(function() {
+        if ($(this).hasClass("selected")) {
+          selectedValue = $(this).attr("data-value");
+        }
+      });
+      if (selectedValue == 1) {
+        var yaySound = $("#what-sound")[0];
+        yaySound.play();
+      }
+    });
+  });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Films</title>
+  <link rel="stylesheet" type="text/css" href="C:\Users\Dejana\film\film.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h2>Movies</h2>
+  </header>
+  <nav>
+           
+    <div class="nav-links">
+    <ul>
+  <li><a href="video.html"><h5>Etherealms</h5></a></li>
+         <li><a href="film.html"><h5>Movies</h5></a></li>
+         <li><a href="songs.html"><h5>Music Session</h5></a></li>
+         <li><a href="quotes.html"><h5>Cœur</h5></a></li>
+         <li><a href="rateteacher.html"><h5>Evalu8</h5></a></li>
+         
+
+</ul>
+  </div>
+  </nav>
+  <main>
+
+      
+    
+    <div class="filters">
+      <select id="filter-select">
+        <option value="all">All</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        
+      </select>
+    </div>
+    <div class="films-list">
+        <div class="film-card" data-genre="action" data-video="https://www.youtube.com/watch?v=tJRLI_O9Reo">
+            <div class="film info">
+          <h3>Only the strong</h3>
+          <p class="film-description">
+            A master of the Brazilian martial art, capoeira, Stevens pledges to straighten out a dozen of the school's worst
+             students by teaching them this demanding and highly-disciplined fighting style. Slowly, his program begins to work,
+              giving the students new hope and purpose.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class1">Read Reviews</a>
+        </div>
+    </div>
+        <div class="film-card2" data-genre="comedy" data-video="https://www.youtube.com/watch?v=gj5ibYSz8C0">
+          <h3>Glass Onion:A Knives Out Mystery</h3>
+          <p class="film-description">
+            Tech billionaire Miles Born invites his friends for a getaway
+            on his private Greek island. When someone turns up dead,
+            Detective Benoit Blanc is put on the case.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class2">Read Reviews</a>
+        </div>
+        <div class="film-card3" data-genre="drama" data-video="https://www.youtube.com/watch?v=5muQK7CuFtY">
+          <h3>Babylon</h3>
+          <p class="film-description">
+            Tale of outsized ambition and outrageous excess, 
+            Babylon traces the rise and fall of multiple characters during an era of unbridled decadence and depravity in early Hollywood.
+            Starting with Brad Pitt, Margot Robbie, Tobey Maguire..
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class3">Read Reviews</a>
+        </div>
+        <div class="film-card4" data-genre="comedy" data-video="https://www.youtube.com/watch?v=pCMHc-IFAB0">
+          <h3>You People</h3>
+          <p class="film-description">
+            The film features an ensemble cast that includes Hill, Lauren London, David Duchovny, Nia Long, Julia Louis-Dreyfus, 
+            and Eddie Murphy. Its plot focuses on an interracial couple and how their families reckon with modern love amid culture clashes,
+             societal expectations and generational differences.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class4">Read Reviews</a>
+        </div>
+        <!-- Add more film cards as needed -->
+        <div class="film-card5" data-genre="action" data-video="https://www.youtube.com/watch?v=2kh5odFY8sc">
+          <h3>Bullet Train</h3>
+          <p class="film-description">
+            The bullet train, or “Shinkansen”, is a type of passenger train which operates on Japan's high-speed railway network.
+             Capable of reaching a maximum speed of 320kms per hour, the bullet train offers riders an exceptionally unique and efficient travel experience.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class5">Read Reviews</a>
+        </div>
+      
+        <div class="film-card6" data-genre="action" data-video="https://www.youtube.com/watch?v=d9MyW72ELq0">
+          <h3>Avatar: The Way Of Water </h3>
+          <p class="film-description">
+            Set more than a decade after the events of the first film, “Avatar: The Way of Water” begins to tell the story of the
+             Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe,
+              the battles they fight to stay alive, and the tragedies they endure.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class6">Read Reviews</a>
+        </div>
+        <div class="film-card7" data-genre="comedy" data-video="https://www.youtube.com/watch?v=Rvr68u6k5sI">
+          <h3>Coco  </h3>
+          <p class="film-description">
+            The story follows a 12-year-old boy named Miguel (Gonzalez) who is accidentally transported to the Land of the Dead,
+             where he seeks the help of his deceased musician great-great-grandfather to return him to his family among the living 
+             and to reverse his family's ban on music. Coco. Theatrical release poster.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class7">Read Reviews</a>
+        </div>
+        <div class="film-card8" data-genre="comedy" data-video="https://www.youtube.com/watch?v=aeVkbNka9HM">
+          <h3>White Chicks  </h3>
+          <p class="film-description">
+            Two disgraced FBI agents go way undercover in an effort to protect hotel heiresses the Wilson sisters from a kidnapping plot. Two black FBI agents,
+             Kevin and Marcus, have gone undercover to bust a drug dealer, but their sting falls apart.
+          </p>
+          <a class="review" href="C:\Users\Dejana\film\reviews.html#class8">Read Reviews</a>
+        </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Films</p>
+  </footer>
+  <script>
+   $(document).ready(function() {
+  $('#filter-select').change(function() {
+    var selectedOption = $(this).val();
+
+    $('.film-card').each(function() {
+      var filmGenre = $(this).data('genre');
+
+      if (filmGenre === selectedOption || selectedOption === 'all') {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+});
+$(document).ready(function() {
+  $('.film-card').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(only_the_strong.jfif)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card2').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(glass_onion.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card3').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(babylon.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card4').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(you_people.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card5').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(bullet_train.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card6').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(avatar.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card7').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(coco.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card8').hover(function() {
+    $(this).css("background-image", "url(gray.jpg)");
+  }, function() {
+    $(this).css("background-image", "url(whitechicks.jpg)");
+  });
+});
+$(document).ready(function() {
+  $('.film-card').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card2').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card3').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card4').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card5').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card6').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card7').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+$(document).ready(function() {
+  $('.film-card8').click(function() {
+    var videoUrl = $(this).data('video');
+    window.location.href = videoUrl;
+  });
+});
+  </script>
+</body>
+</html>
